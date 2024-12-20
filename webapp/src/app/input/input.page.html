@@ -1,1 +1,19 @@
-<p>input.page works!</p>
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Current measurement of the energy</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-input label="Current value" value="23"></ion-input>
+
+  <ion-datetime-button datetime="datetime"></ion-datetime-button>
+
+  <ion-modal [keepContentsMounted]="true">
+    <ng-template>
+      <ion-datetime id="datetime"></ion-datetime>
+    </ng-template>
+  </ion-modal>
+
+  <ion-button>Add</ion-button>
+</ion-content>
