@@ -4,7 +4,7 @@
   "description": "Simple appliction to caculate energy costs",
   "main": "index.js",
   "scripts": {
-    "docs": "npx typedoc core/src/index.ts webapp/src/main.ts --tsconfig webapp/tsconfig.app.json"
+    "docs": "npx typedoc core/src/index.ts webapp/src/main.ts --tsconfig webapp/tsconfig.app.json --out dist/docs"
   },
   "repository": {
     "type": "git",

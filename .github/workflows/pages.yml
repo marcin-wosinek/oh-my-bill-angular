@@ -33,7 +33,7 @@ jobs:
       - name: Build
         run: |
           npm ci
-          npx nx run-many -t build
+          npx nx run webapp:build
           npm run docs
       - name: Setup Pages
         id: pages
