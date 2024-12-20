@@ -1,3 +1,7 @@
+/**
+ * Angular application to Oh my bill project.
+ * @module webapp
+ */
 import { bootstrapApplication } from '@angular/platform-browser';
 import {
   RouteReuseStrategy,

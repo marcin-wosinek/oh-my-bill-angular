@@ -1,3 +1,7 @@
+/**
+ * Data models and buisness logic of the application.
+ * @module core
+ */
 import { calculateConsumption } from './lib/calculate-consumption';
 import { findAfterMeasurement } from './lib/find-after-measurement';
 
