@@ -1,1 +1,21 @@
-<p>settings.page works!</p>
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Settings</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <h1>Energy tariff info</h1>
+
+  <ion-input
+    label="Fixed charge per day"
+    [value]="tariff?.fixedCharge"
+    (input)="updateTariff()"
+  ></ion-input>
+
+  <ion-input
+    label="Unit charge"
+    [value]="tariff?.unitCharge"
+    (input)="updateTariff()"
+  ></ion-input>
+</ion-content>
