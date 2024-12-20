@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "Simple appliction to caculate energy costs",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "docs": "typedoc core/src/index.ts --tsconfig core/tsconfig.lib.json --out dist/docs"
+  },
   "repository": {
     "type": "git",
     "url": "git+ssh://git@github.com/marcin-wosinek/oh-my-bill.git"

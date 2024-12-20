@@ -33,7 +33,7 @@ jobs:
       - name: Build
         run: |
           npm ci
-          npm run docs
+          npx nx run-many -t build
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v5

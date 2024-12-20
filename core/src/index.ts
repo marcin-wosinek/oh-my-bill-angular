@@ -1,10 +1,10 @@
-import { calculateConsumption } from './calculate-consumption';
-import { findAfterMeasurement } from './find-after-measurement';
+import { calculateConsumption } from './lib/calculate-consumption';
+import { findAfterMeasurement } from './lib/find-after-measurement';
 
-import { findBeforeMeasurement } from './find-before-measurement';
-import { Consumption } from './consumption';
-import { Measurement } from './measurement';
-import { Tariff } from './tariff';
+import { findBeforeMeasurement } from './lib/find-before-measurement';
+import { Consumption } from './lib/consumption';
+import { Measurement } from './lib/measurement';
+import { Tariff } from './lib/tariff';
 
 export {
   calculateConsumption,
