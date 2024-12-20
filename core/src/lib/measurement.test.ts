@@ -1,7 +1,7 @@
-import { Measurement } from "./measurement";
+import { Measurement } from './measurement';
 
-describe("Measurement", () => {
-  test("should be an a constructor and provide one default value", () => {
+describe('Measurement', () => {
+  test('should be an a constructor and provide one default value', () => {
     const now = new Date();
 
     let measurement = new Measurement(now);

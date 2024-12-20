@@ -2,7 +2,7 @@
  * Stores consumption data ready to be displayed to the user.
  */
 export class Consumption {
-  constructor(datetime: Date, cost: number = 0) {
+  constructor(datetime: Date, cost = 0) {
     this.datetime = datetime;
     this.cost = cost;
   }

@@ -5,7 +5,7 @@ export class Tariff {
   /**
    * Sets values to what was provides, or to the default values.
    */
-  constructor(fixedCharge: number = 0.4636274, unitCharge: number = 0.178957) {
+  constructor(fixedCharge = 0.4636274, unitCharge = 0.178957) {
     this.fixedCharge = fixedCharge;
     this.unitCharge = unitCharge;
   }

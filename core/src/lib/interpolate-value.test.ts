@@ -6,9 +6,8 @@ import { parseISO } from 'date-fns';
 
 describe('interpolateValue', () => {
   test('should return 0 when both measurements are missing', () => {
-    // @ts-ignore
+    // @ts-expect-error missing parameter
     expect(interpolateValue()).toBe(0);
-    // @ts-ignore
     expect(interpolateValue(parseISO('2024-12-18T17:30:00'))).toBe(0);
   });
 
@@ -16,14 +15,12 @@ describe('interpolateValue', () => {
     expect(
       interpolateValue(
         parseISO('2024-12-18T17:30:00'),
-        // @ts-ignore
-        null,
+        undefined,
         new Measurement(parseISO('2024-12-18T18:00:00'), 2)
       )
     ).toBe(2);
 
     expect(
-      // @ts-ignore
       interpolateValue(
         parseISO('2024-12-18T17:30:00'),
         new Measurement(parseISO('2024-12-18T18:00:00'), 52)

@@ -23,12 +23,13 @@ later on.
 ### Setting the energy tarif
 
 The energy tarif should have two values:
-* cost per kWh,
-* flat cost for line maintainence.
+
+- cost per kWh,
+- flat cost for line maintainence.
 
 Both values should default to some resonable value, and be editable by user.
 
-### Reviewing the energy consumption 
+### Reviewing the energy consumption
 
 There should be a way for user to evaluate their consumption—optimal would be
 barchart per hour.

@@ -1,7 +1,7 @@
-import { Consumption } from "./consumption";
+import { Consumption } from './consumption';
 
-describe("Consumption", () => {
-  test("should be an a constructor and provide one default value", () => {
+describe('Consumption', () => {
+  test('should be an a constructor and provide one default value', () => {
     const now = new Date();
 
     let consumption = new Consumption(now);

@@ -1,7 +1,7 @@
-import { Tariff } from "./tariff";
+import { Tariff } from './tariff';
 
-describe("Tariff", () => {
-  test("should be an a constructor with default value", () => {
+describe('Tariff', () => {
+  test('should be an a constructor with default value', () => {
     const tariff = new Tariff();
 
     expect(tariff).toBeInstanceOf(Tariff);
@@ -9,7 +9,7 @@ describe("Tariff", () => {
     expect(tariff.unitCharge).toBe(0.178957);
   });
 
-  test("should pass provided valeus", () => {
+  test('should pass provided valeus', () => {
     const tariff = new Tariff(3, 5);
 
     expect(tariff.fixedCharge).toBe(3);

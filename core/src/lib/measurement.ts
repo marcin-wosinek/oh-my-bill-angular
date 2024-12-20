@@ -2,7 +2,7 @@
  * Stores energy meter measurement, registered by the user.
  */
 export class Measurement {
-  constructor(datetime: Date, value: number = 0) {
+  constructor(datetime: Date, value = 0) {
     this.datetime = datetime;
     this.value = value;
   }

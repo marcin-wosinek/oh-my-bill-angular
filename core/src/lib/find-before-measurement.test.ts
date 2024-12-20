@@ -6,7 +6,7 @@ import { parseISO } from 'date-fns';
 
 describe('findBeforeMeasurement', () => {
   test('should return undefined if empty array or time is missing', () => {
-    // @ts-ignore
+    // @ts-expect-error missing parameter
     expect(findBeforeMeasurement()).toBeUndefined();
     expect(
       findBeforeMeasurement(parseISO('2024-12-19T12:30:00'), [])

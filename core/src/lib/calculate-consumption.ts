@@ -22,7 +22,7 @@ export function calculateConsumption(
       hourlyFixedCharge = tariff.fixedCharge / 24;
 
     const firstHour = startOfHour(orderedMeasurments[0].datetime),
-      // @ts-ignore
+      // @ts-expect-error type check issue
       lastHour = startOfHour(orderedMeasurments.at(-1).datetime);
 
     const consumptionArraySize = differenceInHours(lastHour, firstHour) + 1;

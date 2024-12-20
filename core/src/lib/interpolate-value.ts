@@ -16,12 +16,11 @@ export function interpolateValue(
   }
 
   if (!startMeasurement) {
-    // @ts-ignore
+    // @ts-expect-error type checked above
     return endMeasurement.value;
   }
 
   if (!endMeasurement) {
-    // @ts-ignore
     return startMeasurement.value;
   }
 

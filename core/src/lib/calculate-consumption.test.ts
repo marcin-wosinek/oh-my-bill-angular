@@ -7,13 +7,13 @@ import { endOfHour, parseISO } from 'date-fns';
 
 describe('calculateConsumption', () => {
   test('should return empty array', () => {
-    // @ts-ignore
+    // @ts-expect-error missing parameter
     expect(calculateConsumption()).toHaveLength(0);
 
     const tariff = new Tariff();
 
     // missing measurements
-    // @ts-ignore
+    // @ts-expect-error missing parameter
     expect(calculateConsumption(tariff)).toHaveLength(0);
 
     // only one measurements
