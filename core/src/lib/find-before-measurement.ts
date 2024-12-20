@@ -1,6 +1,6 @@
-import { Measurement } from "./measurement";
+import { Measurement } from './measurement';
 
-import { compareDesc, isBefore, isDate } from "date-fns";
+import { compareDesc, isBefore, isDate } from 'date-fns';
 
 /**
  * Method that returns the last relevant measurement before the time.
@@ -8,7 +8,7 @@ import { compareDesc, isBefore, isDate } from "date-fns";
 export function findBeforeMeasurement(
   time: Date,
   measurements: Measurement[]
-): Measurement {
+): Measurement | undefined {
   if (!isDate(time) || !measurements || measurements.length < 1) {
     return;
   }

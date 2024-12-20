@@ -1,6 +1,6 @@
-import { Measurement } from "./measurement";
+import { Measurement } from './measurement';
 
-import { compareAsc, isAfter, isDate } from "date-fns";
+import { compareAsc, isAfter, isDate } from 'date-fns';
 
 /**
  * Method that returns the first relevant measurement after the time.
@@ -8,7 +8,7 @@ import { compareAsc, isAfter, isDate } from "date-fns";
 export function findAfterMeasurement(
   time: Date,
   measurements: Measurement[]
-): Measurement {
+): Measurement | undefined {
   if (!isDate(time) || !measurements || measurements.length < 1) {
     return;
   }

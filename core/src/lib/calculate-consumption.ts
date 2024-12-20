@@ -1,12 +1,12 @@
-import { addHours, compareAsc, differenceInHours, startOfHour } from "date-fns";
-import { range } from "lodash";
+import { addHours, compareAsc, differenceInHours, startOfHour } from 'date-fns';
+import { range } from 'lodash';
 
-import { Consumption } from "./consumption";
-import { Measurement } from "./measurement";
-import { Tariff } from "./tariff";
-import { findAfterMeasurement } from "./find-after-measurement";
-import { findBeforeMeasurement } from "./find-before-measurement";
-import { interpolateValue } from "./interpolate-value";
+import { Consumption } from './consumption';
+import { Measurement } from './measurement';
+import { Tariff } from './tariff';
+import { findAfterMeasurement } from './find-after-measurement';
+import { findBeforeMeasurement } from './find-before-measurement';
+import { interpolateValue } from './interpolate-value';
 
 /**
  * Method that calculates hourly consumption for a given measurements.
@@ -22,6 +22,7 @@ export function calculateConsumption(
       hourlyFixedCharge = tariff.fixedCharge / 24;
 
     const firstHour = startOfHour(orderedMeasurments[0].datetime),
+      // @ts-ignore
       lastHour = startOfHour(orderedMeasurments.at(-1).datetime);
 
     const consumptionArraySize = differenceInHours(lastHour, firstHour) + 1;
@@ -29,8 +30,8 @@ export function calculateConsumption(
     let currentConsumption: number,
       currentHour: Date,
       nextHour: Date = firstHour,
-      startMeasurement: Measurement,
-      endMeasurement: Measurement,
+      startMeasurement: Measurement | undefined,
+      endMeasurement: Measurement | undefined,
       nextConsumption: number = orderedMeasurments[0].value;
 
     const consumptionArray = range(0, consumptionArraySize).map((n) => {
